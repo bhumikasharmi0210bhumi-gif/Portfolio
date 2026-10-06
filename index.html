@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhumika ER | Aspiring Penetration Tester & DFIR Enthusiast</title>
+  
+  <!-- Meta Description -->
+  <meta name="description" content="Portfolio of Bhumika ER, 2nd Year Cyber Security Student & Mentor at EV Cyber Academy. Showcasing hands-on penetration testing, digital forensics, security projects, and lab assessment reports." />
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              bg: '#0a0d14',
+              surface: '#101622',
+              card: '#162032',
+              border: '#1e293b',
+              cyan: '#38bdf8',
+              emerald: '#10b981',
+              violet: '#a855f7',
+              amber: '#f59e0b',
+              rose: '#f43f5e',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="bg-[#0a0d14] text-slate-100 min-h-screen cyber-grid relative selection:bg-cyan-500/30 selection:text-cyan-200">
+
+  <!-- Ambient Cyber Lighting -->
+  <div class="cyber-glow-1"></div>
+  <div class="cyber-glow-2"></div>
+  <div class="cyber-glow-3"></div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-40 w-full nav-blur transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand / Logo -->
+      <a href="#hero" class="flex items-center space-x-3 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/40 flex items-center justify-center font-mono font-bold text-cyan-400 text-sm group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(56,189,248,0.4)] transition">
+          BER
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-tight text-white group-hover:text-cyan-300 transition">Bhumika ER</span>
+          <span class="text-[10px] font-mono text-cyan-400/80 flex items-center space-x-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block status-pulse"></span>
+            <span>Security Student & Mentor</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-mono">
+        <a href="#about" class="text-slate-300 hover:text-cyan-400 transition">/about</a>
+        <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition">/skills</a>
+        <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition">/projects</a>
+        <a href="#lab-reports" class="text-slate-300 hover:text-cyan-400 transition">/lab-reports</a>
+        <a href="#achievements" class="text-slate-300 hover:text-cyan-400 transition">/certifications</a>
+        <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition">/contact</a>
+      </nav>
+
+      <!-- Right Action & Theme Toggle -->
+      <div class="flex items-center space-x-3">
+        
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" title="Toggle Light/Dark Theme" class="p-2 rounded-lg bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-cyan-400 hover:border-cyan-500/40 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+
+        <!-- Get In Touch CTA -->
+        <a href="#contact" class="hidden sm:inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 hover:border-cyan-400 text-xs font-mono transition shadow-sm">
+          <span>Connect</span>
+          <span class="text-xs">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#0a0d14]/95 border-b border-slate-800 px-4 py-4 space-y-3 font-mono text-sm">
+      <a href="#about" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/about</a>
+      <a href="#skills" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/skills</a>
+      <a href="#projects" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/projects</a>
+      <a href="#lab-reports" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/lab-reports</a>
+      <a href="#achievements" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/certifications</a>
+      <a href="#contact" class="mobile-nav-link block text-slate-300 hover:text-cyan-400 py-1">/contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Intro & Details -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Status Tag -->
+          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 status-pulse"></span>
+            <span>Open to Internships, Mentoring & Security Collaborations</span>
+          </div>
+
+          <!-- Hero Name & Title -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white">
+              Bhumika <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500">ER</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-mono text-cyan-400 font-semibold tracking-wide">
+              Aspiring Penetration Tester
+            </p>
+            <p class="text-sm sm:text-base text-slate-400 font-medium flex items-center space-x-2">
+              <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+              <span>2nd Year Cyber Security Student & Mentor at EV Cyber Academy</span>
+            </p>
+          </div>
+
+          <!-- Mission / Bio Quote Box -->
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800/80 relative">
+            <div class="text-xs font-mono text-cyan-400/80 mb-1 flex items-center space-x-1.5">
+              <span>❯_</span>
+              <span>Statement of Purpose</span>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed italic">
+              "I'm a Cybersecurity student passionate about Vulnerability Assessment and Penetration Testing, Digital Forensics and Incident Response. I'm building hands-on skills through practical labs, cybersecurity projects, and continuous learning, with a goal of becoming a skilled DFIR professional who can investigate, analyze, and respond to real-world cyber threats."
+            </p>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#lab-reports" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs sm:text-sm font-mono flex items-center space-x-2 shadow-lg shadow-cyan-500/20 transition transform hover:-translate-y-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span>View Lab Reports & Proofs</span>
+            </a>
+            <a href="#projects" class="px-5 py-2.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-500/50 text-xs sm:text-sm font-mono flex items-center space-x-2 transition">
+              <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              <span>Explore Projects</span>
+            </a>
+            <button onclick="copyToClipboard('bhumikasharmi0210bhumi@gmail.com', 'Email address')" class="px-4 py-2.5 rounded-xl bg-slate-900/70 hover:bg-slate-800/90 text-cyan-300 border border-slate-800 hover:border-cyan-500/40 text-xs font-mono flex items-center space-x-2 transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Social Links Chips -->
+          <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono">
+            <span class="text-slate-400 mr-1">Handles:</span>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/bhumika-e-r-b75018381" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              LinkedIn
+            </a>
+            <a href="https://tryhackme.com/p/bhumikasharmi0210bhumi" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              TryHackMe
+            </a>
+            <a href="https://profile.hackthebox.com/profile/01a0943b-b8ec-70c2-aac9-a177e8cc2adc" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              Hack The Box
+            </a>
+            <a href="https://bugcrowd.com/h/bhumikaer10" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              Bugcrowd
+            </a>
+            <a href="https://instagram.com/_cyber_enthusiastic_" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition">
+              Instagram
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Profile Picture Frame with High-Tech Aesthetics -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            
+            <!-- Glow background halo -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-emerald-500 rounded-3xl blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+            
+            <!-- Main Frame Card -->
+            <div class="relative rounded-2xl bg-slate-900 p-3 border border-cyan-500/30 shadow-2xl overflow-hidden">
+              
+              <!-- Frame Header Bar -->
+              <div class="px-3 py-2 bg-slate-950/80 rounded-t-xl border-b border-slate-800/80 flex items-center justify-between mb-3 text-xs font-mono">
+                <div class="flex items-center space-x-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="text-slate-400 ml-2">bhumika_er.id</span>
+                </div>
+                <span class="text-cyan-400 text-[11px]">ACTIVE_SESSION</span>
+              </div>
+
+              <!-- Profile Image Container -->
+              <div class="relative rounded-xl overflow-hidden aspect-[4/5] bg-slate-950">
+                <img 
+                  src="assets/images/profile.jpg" 
+                  alt="Bhumika ER - Aspiring Penetration Tester" 
+                  class="w-full h-full object-cover object-center filter contrast-105 brightness-100 hover:scale-105 transition duration-500"
+                />
+                
+                <!-- Bottom Gradient Overlay with Badges -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-slate-900/90 backdrop-blur-md border border-slate-800 text-xs font-mono space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-bold text-white">Bhumika ER</span>
+                    <span class="text-emerald-400 text-[10px] px-2 py-0.5 rounded bg-emerald-950 border border-emerald-800/50">2025 – 2029</span>
+                  </div>
+                  <p class="text-slate-400 text-[11px] truncate">B.E. CS (Cyber Security) • MCET</p>
+                </div>
+              </div>
+
+              <!-- Card Mini Footer Stats -->
+              <div class="grid grid-cols-3 gap-2 mt-3 pt-2 border-t border-slate-800/80 text-center font-mono text-xs">
+                <div class="p-1.5 bg-slate-950/60 rounded">
+                  <span class="block text-cyan-400 font-bold">5+</span>
+                  <span class="text-[10px] text-slate-400">Projects</span>
+                </div>
+                <div class="p-1.5 bg-slate-950/60 rounded">
+                  <span class="block text-emerald-400 font-bold">7</span>
+                  <span class="text-[10px] text-slate-400">Labs & Proofs</span>
+                </div>
+                <div class="p-1.5 bg-slate-950/60 rounded">
+                  <span class="block text-violet-400 font-bold">SIH26</span>
+                  <span class="text-[10px] text-slate-400">Hackathon</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Education Section -->
+  <section id="about" class="py-16 border-t border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-10">
+        <span class="text-cyan-400 font-mono text-sm">01.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">About & Education</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left: About Narrative -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="glass-card p-6 md:p-8 rounded-2xl border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-white flex items-center space-x-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Practitioner Profile</span>
+            </h3>
+            
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              I am currently pursuing my undergraduate degree in <strong class="text-white">Computer Science Engineering (Cyber Security)</strong> at Dr. Mahalingam College of Engineering and Technology. My primary technical interests center around <strong class="text-cyan-300">Vulnerability Assessment and Penetration Testing (VAPT)</strong> across web, mobile, and internal network vectors, as well as <strong class="text-cyan-300">Digital Forensics and Incident Response (DFIR)</strong>.
+            </p>
+            
+            <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+              Rather than theoretical concepts alone, I prioritize building practical hands-on proficiency through structured lab scenarios, PortSwigger Web Security Academy exercises, capture-the-flag competitions, and independent security research implementations like my <strong class="text-white">DEVIS</strong> evidence integrity system and <strong class="text-white">Cyber Vortex</strong> hackathon prototype.
+            </p>
+
+            <div class="pt-4 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+              <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800">
+                <span class="text-slate-400 block mb-1">Focus Areas:</span>
+                <span class="text-cyan-300 font-semibold">Web VAPT • DFIR • Network Auditing</span>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800">
+                <span class="text-slate-400 block mb-1">Methodology:</span>
+                <span class="text-emerald-300 font-semibold">Evidence-Backed • Ethical • Aligned with Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Education & Mentorship Cards -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Education Card -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-cyan-950 text-cyan-400 border border-cyan-800/50">EDUCATION</span>
+              <span class="text-xs font-mono text-slate-400">2025 – 2029</span>
+            </div>
+            
+            <h4 class="text-base font-bold text-white">B.E. Computer Science (Cyber Security)</h4>
+            <p class="text-xs sm:text-sm text-cyan-300 font-medium">Dr. Mahalingam College of Engineering and Technology</p>
+            <p class="text-xs text-slate-400 flex items-center space-x-1">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span>Pollachi, Tamil Nadu, India</span>
+            </p>
+            <p class="text-xs text-slate-300 pt-2 border-t border-slate-800/80 leading-relaxed">
+              Coursework covering Computer Networks, Data Structures, Operating Systems, Cryptography, Database Management, and Network Defense.
+            </p>
+          </div>
+
+          <!-- Mentorship Card -->
+          <div class="glass-card p-6 rounded-2xl border border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-violet-950 text-violet-300 border border-violet-800/50">LEADERSHIP & MENTORSHIP</span>
+              <span class="text-xs font-mono text-emerald-400">Active</span>
+            </div>
+            
+            <h4 class="text-base font-bold text-white">Mentor, LFHP</h4>
+            <p class="text-xs sm:text-sm text-violet-300 font-medium">EV Cyber Academy</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Guiding aspiring cybersecurity enthusiasts in foundational security concepts, Linux CLI navigation, hands-on lab setups, and vulnerability discovery basics.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="py-16 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="text-cyan-400 font-mono text-sm">02.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Technical Skills & Domain Competencies</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+      <p class="text-sm text-slate-400 font-mono mb-10">Hands-on tools, application vulnerability research, and digital forensics methodologies.</p>
+
+      <!-- Skills Grid (Categorized Clean Chips) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1. Offensive Security -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-rose-500/10 text-rose-400 border border-rose-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Offensive Security Tools</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Network scanning, traffic capture, mobile decompilation, and automated reconnaissance.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Burp Suite</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Nmap</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Wireshark</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Kali Linux</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Netcat</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">smbclient</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Apktool</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">whatweb</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">dnsrecon</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">testssl.sh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Web Security Topics -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Web Security (PortSwigger)</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Hands-on practice aligned with PortSwigger Web Security Academy and OWASP Top 10.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Access Control Flaws</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Authentication Bypasses</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">IDOR</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">SQL Injection (SQLi)</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Information Disclosure</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Cross-Site Scripting (XSS)</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">File Upload Attacks</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">SSRF & JWT Tampering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Digital Forensics & Incident Response -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Digital Forensics (DFIR)</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Evidence preservation, cryptographic integrity, and compliance standards.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Evidence Integrity</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Hashing (MD5/SHA-256/512)</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Chain of Custody</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Tamper Analysis (ELA/DCT/LSB)</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">ISO/IEC 27037 Aligned</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">NIST SP 800-86</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Recon & OSINT -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Reconnaissance & OSINT</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Passive footprinting, certificate transparency, and DNS zone analysis.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">DNS & WHOIS Analysis</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Subdomain Enumeration</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">TLS/SSL Posture Review</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">HTTP Header Security</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Certificate Transparency Logs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Programming & Frameworks -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-violet-500/10 text-violet-400 border border-violet-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Programming & Databases</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Automation scripting, backend engineering, and database management.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Python</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">C / C++</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Bash Scripting</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">JavaScript (Node.js)</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Flask</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">MySQL & SQLite</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Git & GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Networking & Protocols -->
+        <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              </div>
+              <h3 class="font-bold text-white text-base">Networking & Architecture</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">Protocol analysis, routing fundamentals, and Cisco Academy principles.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">OSI & TCP/IP Stack</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Cisco Networking Academy</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Subnetting & Routing</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Packet Inspection</span>
+              <span class="skill-chip px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-900 text-slate-200 border border-slate-800">Firewall Rules (UFW/iptables)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="py-16 border-t border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="text-cyan-400 font-mono text-sm">03.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Security Projects & Engineering</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+      <p class="text-sm text-slate-400 font-mono mb-8">Production prototypes, hackathon solutions, and vulnerability testing frameworks.</p>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap gap-2 mb-8 text-xs font-mono">
+        <button class="project-filter-btn px-4 py-2 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 font-bold transition" data-filter="all">All Projects</button>
+        <button class="project-filter-btn px-4 py-2 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="dfir">DFIR & Cryptography</button>
+        <button class="project-filter-btn px-4 py-2 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="hackathon">Hackathon</button>
+        <button class="project-filter-btn px-4 py-2 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="offensive">Pentest & Labs</button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 1: DEVIS (Featured) -->
+        <div class="project-card lg:col-span-2 glass-card rounded-2xl border border-cyan-500/30 overflow-hidden relative" data-category="dfir featured">
+          <div class="p-6 md:p-8 space-y-5">
+            
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center space-x-2">
+                <span class="px-3 py-1 text-xs font-mono font-bold rounded-md bg-cyan-950 text-cyan-300 border border-cyan-800">FEATURED PROJECT</span>
+                <span class="px-3 py-1 text-xs font-mono rounded-md bg-violet-950/80 text-violet-300 border border-violet-800/40">IEEE-Style Paper in Progress</span>
+              </div>
+              <div class="flex items-center space-x-3 text-xs font-mono">
+                <a href="https://digital-evidence-integrity-verification-7o4l.onrender.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 hover:bg-cyan-500/30 transition flex items-center space-x-1">
+                  <span>Live Demo</span>
+                  <span>↗</span>
+                </a>
+                <a href="https://github.com/bhumikasharmi0210bhumi-gif/Digital-Evidence-Integrity-Verification-System" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-200 hover:text-white border border-slate-700 transition flex items-center space-x-1">
+                  <span>GitHub</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                DEVIS: Digital Evidence Integrity Verification System
+              </h3>
+              <p class="text-xs sm:text-sm text-cyan-400 font-mono mt-1">Full-Stack Digital Forensics Integrity & Cryptographic Chain of Custody System</p>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              A comprehensive Flask full-stack platform engineered to prove digital evidence remains mathematically unaltered across its entire lifecycle. Integrates multi-algorithm hashing (MD5, SHA-256, SHA-512), AES-256-GCM encryption, a proof-of-work blockchain ledger for tamper evidence, and self-healing redundant storage.
+            </p>
+
+            <!-- Key Technical Highlights List -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
+              <div class="flex items-start space-x-2">
+                <span class="text-cyan-400">▹</span>
+                <span><strong>Forensics & Tampering:</strong> ELA, DCT, and LSB image tamper analysis algorithms.</span>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="text-cyan-400">▹</span>
+                <span><strong>Cryptographic Safeguards:</strong> Shamir's Secret Sharing for key distribution & PII redaction.</span>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="text-cyan-400">▹</span>
+                <span><strong>Standards Compliance:</strong> Aligned with ISO/IEC 27037 and NIST SP 800-86 forensics baselines.</span>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="text-cyan-400">▹</span>
+                <span><strong>Reporting:</strong> W3C PROV-O certificates, court-ready PDF, and NIST BagIt archives.</span>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-3 border-t border-slate-800/80">
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Python</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Flask</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Cryptography (AES-GCM)</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Blockchain Ledger</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">RBAC</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Docker</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Cyber Vortex (Smart India Hackathon 2026) -->
+        <div class="project-card glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between" data-category="hackathon dfir">
+          <div class="p-6 md:p-8 space-y-4">
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-amber-950 text-amber-300 border border-amber-800/60">
+                SIH 2026 (SIH26184)
+              </span>
+              <div class="flex items-center space-x-2 text-xs font-mono">
+                <a href="https://cyber-vortex.onrender.com" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-400 border border-slate-700 transition">Demo ↗</a>
+                <a href="https://github.com/bhumikasharmi0210bhumi-gif/SIH-Demo" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">GitHub ↗</a>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-white">Cyber Vortex</h3>
+              <p class="text-xs text-amber-300 font-mono mt-0.5">Cybercrime Cash-Withdrawal Forecasting Framework</p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Predictive framework that scores likely ATM clusters and bank branches into Low, Medium, High, and Critical risk tiers with 2 to 6 hour forecasting windows so cyber-cell responders can intervene before illicit funds are cashed out. Incorporates a device de-anonymization radar and on-chain TRC-20 USDT peeling trail analysis.
+            </p>
+
+            <div class="p-3 rounded-lg bg-amber-950/30 border border-amber-800/30 text-xs text-amber-300 font-mono">
+              <span class="font-bold">Notice:</span> Prototype utilizes simulated threat data for research & demonstration.
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Predictive Modeling</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">ATM Cluster Tiers</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">TRC-20 Peeling</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Hackathon Prototype</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 3: PWNDORA (Track T-05) -->
+        <div class="project-card glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between" data-category="offensive">
+          <div class="p-6 md:p-8 space-y-4">
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-rose-950 text-rose-300 border border-rose-800/60">
+                TRACK T-05 LAB
+              </span>
+              <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-chain-lab---Hackathon" target="_blank" rel="noopener noreferrer" class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">GitHub ↗</a>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-white">PWNDORA: Vulnerability Chain Lab</h3>
+              <p class="text-xs text-rose-300 font-mono mt-0.5">Deliberately Vulnerable Multi-Stage Attack & Defense Platform</p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Containerised application where learners chain four distinct real-world security flaws: forged JWT claims, command injection, Server-Side Request Forgery (SSRF) into internal services, and Insecure Direct Object References (IDOR). Features live scoring gates, automated CVSS v3.1 and MITRE ATT&CK report generation, and defensive code-review modes.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Node.js</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Docker</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">OWASP</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">CVSS v3.1</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">MITRE ATT&CK</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 4: ReconX -->
+        <div class="project-card glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between" data-category="offensive">
+          <div class="p-6 md:p-8 space-y-4">
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60">
+                CLI TOOLKIT
+              </span>
+              <a href="https://github.com/bhumikasharmi0210bhumi-gif/Reconnaissance-Tool" target="_blank" rel="noopener noreferrer" class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">GitHub ↗</a>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-white">ReconX</h3>
+              <p class="text-xs text-cyan-300 font-mono mt-0.5">Modular Bash Reconnaissance & Surface Mapping Framework</p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Automated, modular Bash auditing script created for authorized security assessments. Orchestrates ICMP reachability checks, DNS enumeration, WHOIS queries, Nmap host discovery, service fingerprinting, safe NSE script execution, and formats results into a standalone dark-mode HTML report.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Bash</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Nmap</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">DNS & WHOIS</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">HTML Reports</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 5: AlumniNexus -->
+        <div class="project-card glass-card rounded-2xl border border-slate-800 overflow-hidden flex flex-col justify-between" data-category="web">
+          <div class="p-6 md:p-8 space-y-4">
+            
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-blue-950 text-blue-300 border border-blue-800/60">
+                WEB APPLICATION
+              </span>
+              <a href="https://github.com/bhumikasharmi0210bhumi-gif/Alumini-Website" target="_blank" rel="noopener noreferrer" class="text-xs font-mono px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">GitHub ↗</a>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-bold text-white">AlumniNexus</h3>
+              <p class="text-xs text-blue-300 font-mono mt-0.5">MCET Alumni Intelligence & Mentorship Platform</p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Full-stack Express + Socket.io + SQLite web application featuring distinct Student, Alumni, and Administrator role-based access control (RBAC). Enables job referral pipelines, mentor booking sessions, resume review sharing, PDF document uploads, and an interactive glassmorphism UI.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Node.js / Express</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">Socket.io</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">SQLite</span>
+              <span class="px-2 py-0.5 text-xs font-mono rounded bg-slate-900 text-slate-300 border border-slate-800">RBAC</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab Reports & Evidence Section (Interactive Modal Opener + Direct PDF Links) -->
+  <section id="lab-reports" class="py-16 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="text-cyan-400 font-mono text-sm">04.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Lab Reports & Proof of Work</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+      
+      <!-- Proof Notice / Header Banner with Repo Link -->
+      <div class="p-4 rounded-xl bg-cyan-950/40 border border-cyan-800/40 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs font-mono">
+        <div class="flex items-center space-x-3 text-cyan-200">
+          <div class="w-3 h-3 rounded-full bg-cyan-400 status-pulse shrink-0"></div>
+          <p>
+            <span class="font-bold text-white">Verified Security Evidence:</span> I document my methodology, reproduction commands, and findings in detailed lab assessment reports. Click <strong class="text-cyan-300 font-bold">"View Report"</strong> for the interactive breakdown or <strong class="text-cyan-300 font-bold">"PDF Proof ↗"</strong> to view the official report document.
+          </p>
+        </div>
+        <div class="flex items-center space-x-2 shrink-0">
+          <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-300 border border-cyan-500/50 flex items-center space-x-1.5 transition">
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            <span>Reports Repo ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Report Filter Categories -->
+      <div class="flex flex-wrap gap-2 mb-8 text-xs font-mono">
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/50 font-bold transition" data-filter="all">All Evidence</button>
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="network">Network</button>
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="mobile">Mobile</button>
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="osint">OSINT</button>
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="web">Web</button>
+        <button class="report-filter-btn px-3.5 py-1.5 rounded-lg bg-slate-900/60 text-slate-400 border border-slate-800 hover:text-cyan-400 transition" data-filter="cert">Certificates</button>
+      </div>
+
+      <!-- Lab Report Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- REPORT 1: Internal Network Pentest Lab -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="network">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Network Pentest</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-rose-950 text-rose-300 border border-rose-800/50">High Severity</span>
+            </div>
+            <h3 class="text-base font-bold text-white">Internal Network Pentest Attack Lab</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Kali vs demo target; unauthenticated FTP, command injection to reverse shell, exposed credentials, open SMB share, and admin compromise (5 findings).
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: Nmap, FTP, Netcat, smbclient</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('network-pentest-lab')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/EV_Cyber_Academy_Pentest_attack_lab_Report.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 2: EV Bank Mobile App Assessment -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="mobile">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Mobile Security</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-rose-950 text-rose-300 border border-rose-800/50">Critical Severity</span>
+            </div>
+            <h3 class="text-base font-bold text-white">EV Bank Mobile Application Assessment</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Android APK reverse engineering, bytecode decompilation, hard-coded backend server URLs, hidden administrative routes, and credential exposure.
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: Apktool, dex2jar, VS Code, adb</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('ev-bank-mobile-assessment')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/EV_Bank_APK_Security_Assessment_Report%20.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 3: CSSP Hackathon 2026 Report -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="network osint">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Network & OSINT</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50">6/6 Solved (100%)</span>
+            </div>
+            <h3 class="text-base font-bold text-white">CSSP Hackathon 2026 Assessment Report</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Multi-track reconnaissance and pentest writeup covering DNS records, OSINT fingerprinting, port scanning, and APK static bytecode extraction.
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: Nmap, DNSRecon, Apktool, Wireshark</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('cssp-hackathon-report')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/CSSP_Hackathon_2026_Report.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 4: Myntra OSINT Recon Report -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="osint">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Passive OSINT</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-amber-950 text-amber-300 border border-amber-800/50">Medium Posture</span>
+            </div>
+            <h3 class="text-base font-bold text-white">Myntra OSINT Reconnaissance Report</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Passive external footprinting, DNS records, TLS ciphers, and security headers. Identified strong overall posture with finding: DNSSEC not enabled on zone.
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: whois, dnsrecon, nmap, testssl.sh</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('myntra-osint-report')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/Myntra_OSINT_Recon_Report%20.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 5: Source Code Disclosure Report -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="web">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Web Pentest</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-rose-950 text-rose-300 border border-rose-800/50">High Severity</span>
+            </div>
+            <h3 class="text-base font-bold text-white">Source Code Disclosure Vulnerability Report</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Web application backup artifacts and exposed `.git/` metadata allowing full commit reconstruction and hardcoded database credential extraction.
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: Burp Suite, Gobuster, GitTools, curl</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('source-code-disclosure-report')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/Vulnerability_Report_Source_Code_Disclosure.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 6: Defensive Security Hardening Report -->
+        <div class="report-card glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between" data-category="network hardening">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="px-2 py-0.5 text-[11px] font-mono rounded bg-slate-800 text-slate-300">Defensive Hardening</span>
+              <span class="px-2 py-0.5 text-[11px] font-mono font-bold rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50">Score 86/100</span>
+            </div>
+            <h3 class="text-base font-bold text-white">Defensive Security Hardening Report</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Linux server security baseline, SSH key lockdown, UFW firewall rate limits, Fail2ban rules, and auditd forensic event logging implementation.
+            </p>
+            <div class="text-[11px] font-mono text-cyan-400/80 pt-2 border-t border-slate-800/80">
+              <span>Tools: Lynis, OpenSSL, UFW, Fail2ban, Auditd</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-2 grid grid-cols-2 gap-2">
+            <button onclick="openReportModal('defensive-hardening-report')" class="py-2 px-3 rounded-xl bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>View Report</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports/blob/main/EV_Cyber_Academy_Defensive_Security_Report.pdf" target="_blank" rel="noopener noreferrer" class="py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1 transition">
+              <span>PDF Proof</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- REPORT 7: Basic 101 CTF Certificate -->
+        <div class="report-card lg:col-span-3 glass-card p-6 rounded-2xl border border-cyan-500/30 flex flex-col md:flex-row items-center justify-between gap-6" data-category="cert">
+          <div class="space-y-2 flex-1">
+            <div class="flex items-center space-x-2">
+              <span class="px-2.5 py-1 text-xs font-mono font-bold rounded bg-cyan-950 text-cyan-300 border border-cyan-800">CTF CERTIFICATION</span>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-emerald-950 text-emerald-300 border border-emerald-800/50">4 / 4 Flags Captured</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Basic 101 CTF Linux and Web Security Certificate</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Demonstrated practical hands-on mastery in Linux CLI commands, hidden file discovery, environment process inspection, base64 and cryptographic decoding, and web session cookie tampering.
+            </p>
+          </div>
+          <div class="shrink-0 w-full md:w-auto flex flex-col sm:flex-row items-center gap-3">
+            <button onclick="openReportModal('ctf-certificate-item')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-950 font-mono font-bold text-xs hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20 flex items-center justify-center space-x-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>View Interactive Proof</span>
+            </button>
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif/Vulnerability-Disclosure-Reports" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono font-semibold flex items-center justify-center space-x-1.5 transition">
+              <span>All Reports Repo</span>
+              <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements & Certifications Section -->
+  <section id="achievements" class="py-16 border-t border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="text-cyan-400 font-mono text-sm">05.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Achievements & Coursework</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+      <p class="text-sm text-slate-400 font-mono mb-10">Hackathon milestones, professional mentorship, and technical training credentials.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 1st Place Technofest -->
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-3 relative overflow-hidden">
+          <div class="absolute -right-4 -bottom-4 text-amber-500/10 font-black text-7xl font-mono select-none">1</div>
+          <div class="flex items-center space-x-2 text-amber-400 text-xs font-mono font-bold">
+            <span>🏆 HACKATHON WIN</span>
+          </div>
+          <h3 class="text-base font-bold text-white">1st Place – Technofest-26</h3>
+          <p class="text-xs text-amber-300 font-mono">College-Level Hackathon</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Secured first place in the technical cyber innovation category by presenting an attack-defense platform prototype.
+          </p>
+        </div>
+
+        <!-- Smart India Hackathon -->
+        <div class="glass-card p-6 rounded-2xl border border-cyan-500/30 space-y-3 relative overflow-hidden">
+          <div class="flex items-center space-x-2 text-cyan-400 text-xs font-mono font-bold">
+            <span>🚀 NATIONAL INITIATIVE</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Team Cyber Vortex</h3>
+          <p class="text-xs text-cyan-300 font-mono">Smart India Hackathon 2026 (SIH26184)</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Developed a cybercrime ATM cash withdrawal forecasting engine and on-chain crypto flow tracker prototype.
+          </p>
+        </div>
+
+        <!-- Mentor EV Cyber Academy -->
+        <div class="glass-card p-6 rounded-2xl border border-violet-500/30 space-y-3 relative overflow-hidden">
+          <div class="flex items-center space-x-2 text-violet-400 text-xs font-mono font-bold">
+            <span>🎓 COMMUNITY LEADERSHIP</span>
+          </div>
+          <h3 class="text-base font-bold text-white">Mentor, LFHP</h3>
+          <p class="text-xs text-violet-300 font-mono">EV Cyber Academy</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Facilitating hands-on security workshops, guiding junior cohorts through practical labs, Linux mastery, and ethical disclosure.
+          </p>
+        </div>
+
+        <!-- Cisco Introduction to Cybersecurity -->
+        <div class="glass-card p-5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-blue-400">Cisco Networking Academy</span>
+            <span class="text-slate-400">Completed</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Introduction to Cybersecurity</h4>
+          <p class="text-xs text-slate-400">Foundations of cyber defense, threat actors, cryptography, and risk posture.</p>
+        </div>
+
+        <!-- Cisco Networking Basics -->
+        <div class="glass-card p-5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-blue-400">Cisco Networking Academy</span>
+            <span class="text-slate-400">Completed</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Networking Basics</h4>
+          <p class="text-xs text-slate-400">IP addressing, packet switching, routing principles, and TCP/IP stack.</p>
+        </div>
+
+        <!-- Youth Skilling Programme -->
+        <div class="glass-card p-5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-emerald-400">Magic Bus Foundation</span>
+            <span class="text-slate-400">Completed</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Youth Skilling Programme</h4>
+          <p class="text-xs text-slate-400">Communication, analytical problem solving, and professional development.</p>
+        </div>
+
+        <!-- Coursera Excel -->
+        <div class="glass-card p-5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-sky-400">Coursera</span>
+            <span class="text-slate-400">Completed</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Getting Started with Microsoft Excel</h4>
+          <p class="text-xs text-slate-400">Data organization, pivot analysis, and structured reporting formulas.</p>
+        </div>
+
+        <!-- NPTEL Principles of Management -->
+        <div class="glass-card p-5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-amber-400">NPTEL</span>
+            <span class="text-slate-400">Completed</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Principles of Management</h4>
+          <p class="text-xs text-slate-400">Project lifecycles, operational leadership, and team coordination.</p>
+        </div>
+
+        <!-- Hackviser CORE -->
+        <div class="glass-card p-5 rounded-2xl border border-cyan-500/30 space-y-2">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="text-cyan-400">Hackviser</span>
+            <span class="text-cyan-300 font-bold">In Progress ⏳</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Hackviser CORE Track</h4>
+          <p class="text-xs text-slate-400">Advanced offensive security methodology and hands-on exploitation pathways.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Connect Section -->
+  <section id="contact" class="py-16 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex items-center space-x-3 mb-4">
+        <span class="text-cyan-400 font-mono text-sm">06.</span>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Connect & Collaboration</h2>
+        <div class="h-px bg-slate-800 flex-1 max-w-xs"></div>
+      </div>
+      <p class="text-sm text-slate-400 font-mono mb-10">Open to internships, mentoring conversations and collaboration on security projects.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left: Direct Details & Quick Actions -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- Email Card -->
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+            <div class="space-y-1">
+              <span class="text-[11px] font-mono text-slate-400 block">Direct Email:</span>
+              <a href="mailto:bhumikasharmi0210bhumi@gmail.com" class="text-sm font-mono text-cyan-300 hover:text-cyan-200 transition break-all font-semibold">
+                bhumikasharmi0210bhumi@gmail.com
+              </a>
+            </div>
+            <button onclick="copyToClipboard('bhumikasharmi0210bhumi@gmail.com', 'Email')" title="Copy Email" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition shrink-0 ml-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 flex items-center justify-between">
+            <div class="space-y-1">
+              <span class="text-[11px] font-mono text-slate-400 block">Contact Phone:</span>
+              <a href="tel:+919750044727" class="text-sm font-mono text-slate-200 hover:text-cyan-300 transition font-semibold">
+                +91 9750044727
+              </a>
+            </div>
+            <button onclick="copyToClipboard('+919750044727', 'Phone number')" title="Copy Phone" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-cyan-400 border border-slate-800 transition shrink-0 ml-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+            </button>
+          </div>
+
+          <!-- Location & Education Notice -->
+          <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-xs font-mono space-y-1 text-slate-300">
+            <p><span class="text-slate-400">Location:</span> Pollachi / Coimbatore, Tamil Nadu, India</p>
+            <p><span class="text-slate-400">Current Status:</span> 2nd Year Cyber Security Student (2025–2029)</p>
+          </div>
+
+        </div>
+
+        <!-- Right: Platform Badges Grid -->
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            
+            <!-- GitHub -->
+            <a href="https://github.com/bhumikasharmi0210bhumi-gif" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-cyan-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-cyan-950 text-slate-300 group-hover:text-cyan-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">GitHub</span>
+              <span class="text-[10px] font-mono text-cyan-400">@bhumikasharmi0210</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/bhumika-e-r-b75018381" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-cyan-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-cyan-950 text-slate-300 group-hover:text-cyan-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">LinkedIn</span>
+              <span class="text-[10px] font-mono text-cyan-400">Bhumika E R</span>
+            </a>
+
+            <!-- TryHackMe -->
+            <a href="https://tryhackme.com/p/bhumikasharmi0210bhumi" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-rose-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-rose-950 text-slate-300 group-hover:text-rose-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">TryHackMe</span>
+              <span class="text-[10px] font-mono text-rose-400">bhumikasharmi</span>
+            </a>
+
+            <!-- Hack The Box -->
+            <a href="https://profile.hackthebox.com/profile/01a0943b-b8ec-70c2-aac9-a177e8cc2adc" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-emerald-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-emerald-950 text-slate-300 group-hover:text-emerald-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">Hack The Box</span>
+              <span class="text-[10px] font-mono text-emerald-400">Profile Verified</span>
+            </a>
+
+            <!-- Bugcrowd -->
+            <a href="https://bugcrowd.com/h/bhumikaer10" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-amber-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-amber-950 text-slate-300 group-hover:text-amber-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">Bugcrowd</span>
+              <span class="text-[10px] font-mono text-amber-400">@bhumikaer10</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/_cyber_enthusiastic_" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl border border-slate-800 hover:border-violet-500/50 flex flex-col items-center text-center space-y-2 group transition">
+              <div class="w-10 h-10 rounded-lg bg-slate-900 group-hover:bg-violet-950 text-slate-300 group-hover:text-violet-300 flex items-center justify-center transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <span class="font-bold text-xs text-white">Instagram</span>
+              <span class="text-[10px] font-mono text-violet-400">@_cyber_enthusiastic_</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-800 bg-[#080b10] text-xs font-mono text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+        <span class="text-slate-300 font-semibold">Bhumika ER</span>
+        <span>• B.E. Computer Science (Cyber Security) • 2025 – 2029</span>
+      </div>
+      <div class="text-slate-400">
+        <span>Dr. Mahalingam College of Engineering and Technology, Pollachi</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Report Modal Dialog -->
+  <div id="reportModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 sm:p-6 bg-slate-950/80 backdrop-blur-md overflow-y-auto">
+    <div class="relative w-full max-w-4xl my-auto rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl overflow-hidden">
+      
+      <!-- Close Button -->
+      <button onclick="closeReportModal()" class="modal-close-btn absolute top-4 right-4 z-10 p-2 rounded-lg bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Dynamic Content Injection Container -->
+      <div id="reportModalContent"></div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript Module -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
